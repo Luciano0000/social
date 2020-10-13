@@ -1,0 +1,1174 @@
+[2020-08-31 14:51:03 +0800] [11826] [INFO] Starting gunicorn 20.0.4
+[2020-08-31 14:51:03 +0800] [11826] [INFO] Listening at: http://127.0.0.1:9000 (11826)
+[2020-08-31 14:51:03 +0800] [11826] [INFO] Using worker: gevent
+[2020-08-31 14:51:03 +0800] [11829] [INFO] Booting worker with pid: 11829
+[2020-08-31 14:51:03 +0800] [11830] [INFO] Booting worker with pid: 11830
+[2020-08-31 14:51:03 +0800] [11831] [INFO] Booting worker with pid: 11831
+[2020-08-31 14:51:03 +0800] [11832] [INFO] Booting worker with pid: 11832
+[2020-08-31 14:51:03 +0800] [11833] [INFO] Booting worker with pid: 11833
+[2020-08-31 14:51:03 +0800] [11834] [INFO] Booting worker with pid: 11834
+[2020-08-31 14:51:03 +0800] [11835] [INFO] Booting worker with pid: 11835
+[2020-08-31 14:51:03 +0800] [11836] [INFO] Booting worker with pid: 11836
+[2020-08-31 14:51:06 +0800] [11832] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/luciano/Desktops/fuck/fuck/__init__.py", line 5, in <module>
+    from lib.orm import patch_model
+  File "/home/luciano/Desktops/fuck/lib/orm.py", line 4, in <module>
+    from . cache import Redis
+  File "/home/luciano/Desktops/fuck/lib/cache.py", line 149, in <module>
+    rds = MSRedis(settings.REDIS)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 79, in __getattr__
+    self._setup(name)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 64, in _setup
+    % (desc, ENVIRONMENT_VARIABLE))
+django.core.exceptions.ImproperlyConfigured: Requested setting REDIS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+[2020-08-31 14:51:06 +0800] [11833] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/luciano/Desktops/fuck/fuck/__init__.py", line 5, in <module>
+    from lib.orm import patch_model
+  File "/home/luciano/Desktops/fuck/lib/orm.py", line 4, in <module>
+    from . cache import Redis
+  File "/home/luciano/Desktops/fuck/lib/cache.py", line 149, in <module>
+    rds = MSRedis(settings.REDIS)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 79, in __getattr__
+    self._setup(name)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 64, in _setup
+    % (desc, ENVIRONMENT_VARIABLE))
+django.core.exceptions.ImproperlyConfigured: Requested setting REDIS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+[2020-08-31 14:51:06 +0800] [11834] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/luciano/Desktops/fuck/fuck/__init__.py", line 5, in <module>
+    from lib.orm import patch_model
+  File "/home/luciano/Desktops/fuck/lib/orm.py", line 4, in <module>
+    from . cache import Redis
+  File "/home/luciano/Desktops/fuck/lib/cache.py", line 149, in <module>
+    rds = MSRedis(settings.REDIS)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 79, in __getattr__
+    self._setup(name)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 64, in _setup
+    % (desc, ENVIRONMENT_VARIABLE))
+django.core.exceptions.ImproperlyConfigured: Requested setting REDIS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+[2020-08-31 14:51:06 +0800] [11832] [INFO] Worker exiting (pid: 11832)
+[2020-08-31 14:51:06 +0800] [11833] [INFO] Worker exiting (pid: 11833)
+[2020-08-31 14:51:06 +0800] [11834] [INFO] Worker exiting (pid: 11834)
+[2020-08-31 14:51:06 +0800] [11831] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/luciano/Desktops/fuck/fuck/__init__.py", line 5, in <module>
+    from lib.orm import patch_model
+  File "/home/luciano/Desktops/fuck/lib/orm.py", line 4, in <module>
+    from . cache import Redis
+  File "/home/luciano/Desktops/fuck/lib/cache.py", line 149, in <module>
+    rds = MSRedis(settings.REDIS)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 79, in __getattr__
+    self._setup(name)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 64, in _setup
+    % (desc, ENVIRONMENT_VARIABLE))
+django.core.exceptions.ImproperlyConfigured: Requested setting REDIS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+[2020-08-31 14:51:06 +0800] [11831] [INFO] Worker exiting (pid: 11831)
+[2020-08-31 14:51:06 +0800] [11835] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/luciano/Desktops/fuck/fuck/__init__.py", line 5, in <module>
+    from lib.orm import patch_model
+  File "/home/luciano/Desktops/fuck/lib/orm.py", line 4, in <module>
+    from . cache import Redis
+  File "/home/luciano/Desktops/fuck/lib/cache.py", line 149, in <module>
+    rds = MSRedis(settings.REDIS)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 79, in __getattr__
+    self._setup(name)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 64, in _setup
+    % (desc, ENVIRONMENT_VARIABLE))
+django.core.exceptions.ImproperlyConfigured: Requested setting REDIS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+[2020-08-31 14:51:06 +0800] [11835] [INFO] Worker exiting (pid: 11835)
+[2020-08-31 14:51:06 +0800] [11829] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/luciano/Desktops/fuck/fuck/__init__.py", line 5, in <module>
+    from lib.orm import patch_model
+  File "/home/luciano/Desktops/fuck/lib/orm.py", line 4, in <module>
+    from . cache import Redis
+  File "/home/luciano/Desktops/fuck/lib/cache.py", line 149, in <module>
+    rds = MSRedis(settings.REDIS)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 79, in __getattr__
+    self._setup(name)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 64, in _setup
+    % (desc, ENVIRONMENT_VARIABLE))
+django.core.exceptions.ImproperlyConfigured: Requested setting REDIS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+[2020-08-31 14:51:06 +0800] [11830] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/luciano/Desktops/fuck/fuck/__init__.py", line 5, in <module>
+    from lib.orm import patch_model
+  File "/home/luciano/Desktops/fuck/lib/orm.py", line 4, in <module>
+    from . cache import Redis
+  File "/home/luciano/Desktops/fuck/lib/cache.py", line 149, in <module>
+    rds = MSRedis(settings.REDIS)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 79, in __getattr__
+    self._setup(name)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 64, in _setup
+    % (desc, ENVIRONMENT_VARIABLE))
+django.core.exceptions.ImproperlyConfigured: Requested setting REDIS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+[2020-08-31 14:51:06 +0800] [11836] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/luciano/Desktops/fuck/fuck/__init__.py", line 5, in <module>
+    from lib.orm import patch_model
+  File "/home/luciano/Desktops/fuck/lib/orm.py", line 4, in <module>
+    from . cache import Redis
+  File "/home/luciano/Desktops/fuck/lib/cache.py", line 149, in <module>
+    rds = MSRedis(settings.REDIS)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 79, in __getattr__
+    self._setup(name)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 64, in _setup
+    % (desc, ENVIRONMENT_VARIABLE))
+django.core.exceptions.ImproperlyConfigured: Requested setting REDIS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+[2020-08-31 14:51:06 +0800] [11830] [INFO] Worker exiting (pid: 11830)
+[2020-08-31 14:51:06 +0800] [11836] [INFO] Worker exiting (pid: 11836)
+[2020-08-31 14:51:06 +0800] [11829] [INFO] Worker exiting (pid: 11829)
+[2020-08-31 14:51:06 +0800] [11826] [INFO] Shutting down: Master
+[2020-08-31 14:51:06 +0800] [11826] [INFO] Reason: Worker failed to boot.
+[2020-08-31 14:58:19 +0800] [11918] [INFO] Starting gunicorn 20.0.4
+[2020-08-31 14:58:19 +0800] [11918] [INFO] Listening at: http://127.0.0.1:9000 (11918)
+[2020-08-31 14:58:19 +0800] [11918] [INFO] Using worker: gevent
+[2020-08-31 14:58:19 +0800] [11921] [INFO] Booting worker with pid: 11921
+[2020-08-31 14:58:19 +0800] [11922] [INFO] Booting worker with pid: 11922
+[2020-08-31 14:58:19 +0800] [11923] [INFO] Booting worker with pid: 11923
+[2020-08-31 14:58:19 +0800] [11924] [INFO] Booting worker with pid: 11924
+[2020-08-31 14:58:20 +0800] [11925] [INFO] Booting worker with pid: 11925
+[2020-08-31 14:58:20 +0800] [11926] [INFO] Booting worker with pid: 11926
+[2020-08-31 14:58:20 +0800] [11927] [INFO] Booting worker with pid: 11927
+[2020-08-31 14:58:20 +0800] [11928] [INFO] Booting worker with pid: 11928
+[2020-08-31 14:58:20 +0800] [11922] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/luciano/Desktops/fuck/fuck/__init__.py", line 5, in <module>
+    from lib.orm import patch_model
+  File "/home/luciano/Desktops/fuck/lib/orm.py", line 4, in <module>
+    from . cache import Redis
+  File "/home/luciano/Desktops/fuck/lib/cache.py", line 149, in <module>
+    rds = MSRedis(settings.REDIS)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 79, in __getattr__
+    self._setup(name)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 64, in _setup
+    % (desc, ENVIRONMENT_VARIABLE))
+django.core.exceptions.ImproperlyConfigured: Requested setting REDIS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+[2020-08-31 14:58:20 +0800] [11922] [INFO] Worker exiting (pid: 11922)
+[2020-08-31 14:58:20 +0800] [11921] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/luciano/Desktops/fuck/fuck/__init__.py", line 5, in <module>
+    from lib.orm import patch_model
+  File "/home/luciano/Desktops/fuck/lib/orm.py", line 4, in <module>
+    from . cache import Redis
+  File "/home/luciano/Desktops/fuck/lib/cache.py", line 149, in <module>
+    rds = MSRedis(settings.REDIS)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 79, in __getattr__
+    self._setup(name)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 64, in _setup
+    % (desc, ENVIRONMENT_VARIABLE))
+django.core.exceptions.ImproperlyConfigured: Requested setting REDIS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+[2020-08-31 14:58:20 +0800] [11921] [INFO] Worker exiting (pid: 11921)
+[2020-08-31 14:58:20 +0800] [11923] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/luciano/Desktops/fuck/fuck/__init__.py", line 5, in <module>
+    from lib.orm import patch_model
+  File "/home/luciano/Desktops/fuck/lib/orm.py", line 4, in <module>
+    from . cache import Redis
+  File "/home/luciano/Desktops/fuck/lib/cache.py", line 149, in <module>
+    rds = MSRedis(settings.REDIS)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 79, in __getattr__
+    self._setup(name)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 64, in _setup
+    % (desc, ENVIRONMENT_VARIABLE))
+django.core.exceptions.ImproperlyConfigured: Requested setting REDIS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+[2020-08-31 14:58:20 +0800] [11923] [INFO] Worker exiting (pid: 11923)
+[2020-08-31 14:58:20 +0800] [11924] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/luciano/Desktops/fuck/fuck/__init__.py", line 5, in <module>
+    from lib.orm import patch_model
+  File "/home/luciano/Desktops/fuck/lib/orm.py", line 4, in <module>
+    from . cache import Redis
+  File "/home/luciano/Desktops/fuck/lib/cache.py", line 149, in <module>
+    rds = MSRedis(settings.REDIS)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 79, in __getattr__
+    self._setup(name)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 64, in _setup
+    % (desc, ENVIRONMENT_VARIABLE))
+django.core.exceptions.ImproperlyConfigured: Requested setting REDIS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+[2020-08-31 14:58:20 +0800] [11924] [INFO] Worker exiting (pid: 11924)
+[2020-08-31 14:58:20 +0800] [11925] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/luciano/Desktops/fuck/fuck/__init__.py", line 5, in <module>
+    from lib.orm import patch_model
+  File "/home/luciano/Desktops/fuck/lib/orm.py", line 4, in <module>
+    from . cache import Redis
+  File "/home/luciano/Desktops/fuck/lib/cache.py", line 149, in <module>
+    rds = MSRedis(settings.REDIS)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 79, in __getattr__
+    self._setup(name)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 64, in _setup
+    % (desc, ENVIRONMENT_VARIABLE))
+django.core.exceptions.ImproperlyConfigured: Requested setting REDIS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+[2020-08-31 14:58:20 +0800] [11925] [INFO] Worker exiting (pid: 11925)
+[2020-08-31 14:58:20 +0800] [11926] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/luciano/Desktops/fuck/fuck/__init__.py", line 5, in <module>
+    from lib.orm import patch_model
+  File "/home/luciano/Desktops/fuck/lib/orm.py", line 4, in <module>
+    from . cache import Redis
+  File "/home/luciano/Desktops/fuck/lib/cache.py", line 149, in <module>
+    rds = MSRedis(settings.REDIS)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 79, in __getattr__
+    self._setup(name)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 64, in _setup
+    % (desc, ENVIRONMENT_VARIABLE))
+django.core.exceptions.ImproperlyConfigured: Requested setting REDIS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+[2020-08-31 14:58:20 +0800] [11926] [INFO] Worker exiting (pid: 11926)
+[2020-08-31 14:58:20 +0800] [11927] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/luciano/Desktops/fuck/fuck/__init__.py", line 5, in <module>
+    from lib.orm import patch_model
+  File "/home/luciano/Desktops/fuck/lib/orm.py", line 4, in <module>
+    from . cache import Redis
+  File "/home/luciano/Desktops/fuck/lib/cache.py", line 149, in <module>
+    rds = MSRedis(settings.REDIS)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 79, in __getattr__
+    self._setup(name)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 64, in _setup
+    % (desc, ENVIRONMENT_VARIABLE))
+django.core.exceptions.ImproperlyConfigured: Requested setting REDIS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+[2020-08-31 14:58:20 +0800] [11927] [INFO] Worker exiting (pid: 11927)
+[2020-08-31 14:58:20 +0800] [11928] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/luciano/Desktops/fuck/fuck/__init__.py", line 5, in <module>
+    from lib.orm import patch_model
+  File "/home/luciano/Desktops/fuck/lib/orm.py", line 4, in <module>
+    from . cache import Redis
+  File "/home/luciano/Desktops/fuck/lib/cache.py", line 149, in <module>
+    rds = MSRedis(settings.REDIS)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 79, in __getattr__
+    self._setup(name)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 64, in _setup
+    % (desc, ENVIRONMENT_VARIABLE))
+django.core.exceptions.ImproperlyConfigured: Requested setting REDIS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+[2020-08-31 14:58:20 +0800] [11928] [INFO] Worker exiting (pid: 11928)
+Traceback (most recent call last):
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 209, in run
+    self.sleep()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 357, in sleep
+    ready = select.select([self.PIPE[0]], [], [], 1.0)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/luciano/.local/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 58, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 228, in run
+    super().run()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 229, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 342, in halt
+    self.stop()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 393, in stop
+    time.sleep(0.1)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 53, in apport_excepthook
+    if not enabled():
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 26, in enabled
+    with open(CONFIG) as f:
+  File "/usr/lib/python3.5/_bootlocale.py", line 23, in getpreferredencoding
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+Original exception was:
+Traceback (most recent call last):
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 209, in run
+    self.sleep()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 357, in sleep
+    ready = select.select([self.PIPE[0]], [], [], 1.0)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/luciano/.local/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 58, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 228, in run
+    super().run()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 229, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 342, in halt
+    self.stop()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 393, in stop
+    time.sleep(0.1)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+[2020-08-31 15:01:42 +0800] [13435] [INFO] Starting gunicorn 20.0.4
+[2020-08-31 15:01:42 +0800] [13435] [INFO] Listening at: http://127.0.0.1:9000 (13435)
+[2020-08-31 15:01:42 +0800] [13435] [INFO] Using worker: gevent
+[2020-08-31 15:01:42 +0800] [13438] [INFO] Booting worker with pid: 13438
+[2020-08-31 15:01:42 +0800] [13439] [INFO] Booting worker with pid: 13439
+[2020-08-31 15:01:42 +0800] [13441] [INFO] Booting worker with pid: 13441
+[2020-08-31 15:01:42 +0800] [13438] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/luciano/Desktops/fuck/fuck/__init__.py", line 5, in <module>
+    from lib.orm import patch_model
+  File "/home/luciano/Desktops/fuck/lib/orm.py", line 4, in <module>
+    from . cache import Redis
+  File "/home/luciano/Desktops/fuck/lib/cache.py", line 149, in <module>
+    rds = MSRedis(settings.REDIS)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 79, in __getattr__
+    self._setup(name)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 64, in _setup
+    % (desc, ENVIRONMENT_VARIABLE))
+django.core.exceptions.ImproperlyConfigured: Requested setting REDIS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+[2020-08-31 15:01:42 +0800] [13438] [INFO] Worker exiting (pid: 13438)
+[2020-08-31 15:01:42 +0800] [13442] [INFO] Booting worker with pid: 13442
+[2020-08-31 15:01:42 +0800] [13439] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/luciano/Desktops/fuck/fuck/__init__.py", line 5, in <module>
+    from lib.orm import patch_model
+  File "/home/luciano/Desktops/fuck/lib/orm.py", line 4, in <module>
+    from . cache import Redis
+  File "/home/luciano/Desktops/fuck/lib/cache.py", line 149, in <module>
+    rds = MSRedis(settings.REDIS)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 79, in __getattr__
+    self._setup(name)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 64, in _setup
+    % (desc, ENVIRONMENT_VARIABLE))
+django.core.exceptions.ImproperlyConfigured: Requested setting REDIS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+[2020-08-31 15:01:42 +0800] [13439] [INFO] Worker exiting (pid: 13439)
+[2020-08-31 15:01:42 +0800] [13441] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/luciano/Desktops/fuck/fuck/__init__.py", line 5, in <module>
+    from lib.orm import patch_model
+  File "/home/luciano/Desktops/fuck/lib/orm.py", line 4, in <module>
+    from . cache import Redis
+  File "/home/luciano/Desktops/fuck/lib/cache.py", line 149, in <module>
+    rds = MSRedis(settings.REDIS)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 79, in __getattr__
+    self._setup(name)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 64, in _setup
+    % (desc, ENVIRONMENT_VARIABLE))
+django.core.exceptions.ImproperlyConfigured: Requested setting REDIS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+[2020-08-31 15:01:42 +0800] [13441] [INFO] Worker exiting (pid: 13441)
+[2020-08-31 15:01:43 +0800] [13442] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/luciano/Desktops/fuck/fuck/__init__.py", line 5, in <module>
+    from lib.orm import patch_model
+  File "/home/luciano/Desktops/fuck/lib/orm.py", line 4, in <module>
+    from . cache import Redis
+  File "/home/luciano/Desktops/fuck/lib/cache.py", line 149, in <module>
+    rds = MSRedis(settings.REDIS)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 79, in __getattr__
+    self._setup(name)
+  File "/home/luciano/.local/lib/python3.5/site-packages/django/conf/__init__.py", line 64, in _setup
+    % (desc, ENVIRONMENT_VARIABLE))
+django.core.exceptions.ImproperlyConfigured: Requested setting REDIS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+[2020-08-31 15:01:43 +0800] [13442] [INFO] Worker exiting (pid: 13442)
+Traceback (most recent call last):
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 202, in run
+    self.manage_workers()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 545, in manage_workers
+    self.spawn_workers()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 617, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/luciano/.local/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 58, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 228, in run
+    super().run()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 229, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 342, in halt
+    self.stop()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 393, in stop
+    time.sleep(0.1)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+[2020-08-31 15:03:35 +0800] [13495] [INFO] Starting gunicorn 20.0.4
+[2020-08-31 15:03:35 +0800] [13495] [INFO] Listening at: http://127.0.0.1:9000 (13495)
+[2020-08-31 15:03:35 +0800] [13495] [INFO] Using worker: gevent
+[2020-08-31 15:03:35 +0800] [13498] [INFO] Booting worker with pid: 13498
+[2020-08-31 15:03:35 +0800] [13499] [INFO] Booting worker with pid: 13499
+[2020-08-31 15:03:35 +0800] [13500] [INFO] Booting worker with pid: 13500
+[2020-08-31 15:03:35 +0800] [13501] [INFO] Booting worker with pid: 13501
+[2020-08-31 15:03:35 +0800] [13498] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 956, in _find_and_load_unlocked
+ImportError: No module named 'swiper'
+[2020-08-31 15:03:35 +0800] [13498] [INFO] Worker exiting (pid: 13498)
+[2020-08-31 15:03:35 +0800] [13502] [INFO] Booting worker with pid: 13502
+[2020-08-31 15:03:35 +0800] [13499] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 956, in _find_and_load_unlocked
+ImportError: No module named 'swiper'
+[2020-08-31 15:03:35 +0800] [13499] [INFO] Worker exiting (pid: 13499)
+[2020-08-31 15:03:35 +0800] [13500] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 956, in _find_and_load_unlocked
+ImportError: No module named 'swiper'
+[2020-08-31 15:03:35 +0800] [13500] [INFO] Worker exiting (pid: 13500)
+[2020-08-31 15:03:35 +0800] [13501] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 956, in _find_and_load_unlocked
+ImportError: No module named 'swiper'
+[2020-08-31 15:03:35 +0800] [13501] [INFO] Worker exiting (pid: 13501)
+[2020-08-31 15:03:35 +0800] [13502] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 119, in init_process
+    self.load_wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/util.py", line 358, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 956, in _find_and_load_unlocked
+ImportError: No module named 'swiper'
+[2020-08-31 15:03:35 +0800] [13502] [INFO] Worker exiting (pid: 13502)
+Traceback (most recent call last):
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 202, in run
+    self.manage_workers()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 545, in manage_workers
+    self.spawn_workers()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 617, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/luciano/.local/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 58, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 228, in run
+    super().run()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 229, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 342, in halt
+    self.stop()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 393, in stop
+    time.sleep(0.1)
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/luciano/.local/lib/python3.5/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>

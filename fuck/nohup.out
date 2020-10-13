@@ -1,0 +1,43 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/pkg_resources/__init__.py", line 583, in _build_master
+    ws.require(__requires__)
+  File "/usr/local/lib/python3.5/dist-packages/pkg_resources/__init__.py", line 900, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/usr/local/lib/python3.5/dist-packages/pkg_resources/__init__.py", line 791, in resolve
+    raise VersionConflict(dist, req).with_context(dependent_req)
+pkg_resources.VersionConflict: (gunicorn 20.0.4 (/home/luciano/.local/lib/python3.5/site-packages), Requirement.parse('gunicorn==17.5'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 5, in <module>
+    from pkg_resources import load_entry_point
+  File "/usr/local/lib/python3.5/dist-packages/pkg_resources/__init__.py", line 3257, in <module>
+    @_call_aside
+  File "/usr/local/lib/python3.5/dist-packages/pkg_resources/__init__.py", line 3241, in _call_aside
+    f(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/pkg_resources/__init__.py", line 3270, in _initialize_master_working_set
+    working_set = WorkingSet._build_master()
+  File "/usr/local/lib/python3.5/dist-packages/pkg_resources/__init__.py", line 585, in _build_master
+    return cls._build_from_requirements(__requires__)
+  File "/usr/local/lib/python3.5/dist-packages/pkg_resources/__init__.py", line 598, in _build_from_requirements
+    dists = ws.resolve(reqs, Environment())
+  File "/usr/local/lib/python3.5/dist-packages/pkg_resources/__init__.py", line 786, in resolve
+    raise DistributionNotFound(req, requirers)
+pkg_resources.DistributionNotFound: The 'gunicorn==17.5' distribution was not found and is required by the application
+Traceback (most recent call last):
+  File "/usr/bin/gunicorn", line 5, in <module>
+    from pkg_resources import load_entry_point
+  File "/usr/local/lib/python3.5/dist-packages/pkg_resources/__init__.py", line 3257, in <module>
+    @_call_aside
+  File "/usr/local/lib/python3.5/dist-packages/pkg_resources/__init__.py", line 3241, in _call_aside
+    f(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/pkg_resources/__init__.py", line 3270, in _initialize_master_working_set
+    working_set = WorkingSet._build_master()
+  File "/usr/local/lib/python3.5/dist-packages/pkg_resources/__init__.py", line 583, in _build_master
+    ws.require(__requires__)
+  File "/usr/local/lib/python3.5/dist-packages/pkg_resources/__init__.py", line 900, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/usr/local/lib/python3.5/dist-packages/pkg_resources/__init__.py", line 786, in resolve
+    raise DistributionNotFound(req, requirers)
+pkg_resources.DistributionNotFound: The 'gunicorn==17.5' distribution was not found and is required by the application
